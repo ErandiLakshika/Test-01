@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Text Editor Application
+        </title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+<body>
+    <div class="toolbar">
+        <button onclick="styles('bold')"><img src="Resource/boldicon.png" alt="bold" width="20"></button>
+        <button onclick="styles('underline')"><img src="Resource/underline.png" alt="underline" width="20"></button>
+        <button onclick="styles('italic')"><img src="Resource/italic.png" alt="italic" width="20"></button>
+
+        <lable class="color-icon-button" title="Font color">
+            <img src="Resource/fontcolor.png" alt="Fontcolor" width="20"/>
+            <input type="color" onchange="styles('foreColor', this.value)"/> 
+        </lable>
+
+        <button onclick="styles('justifyLeft')"><img src="Resource/leftalign.png" alt="leftalign" width="20"></button>
+        <button onclick="styles('justifyCenter')"><img src="Resource/centeralign.png" alt="centeralign" width="20"></button>
+        <button onclick="styles('justifyRight')"><img src="Resource/rightalign.png" alt="rightalign" width="20"></button>
+        <button onclick="styles('justifyFull')"><img src="Resource/justifyalign.png" alt="justifyalign" width="20"></button>
+
+        <button onclick="undo()"><img src="Resource/undo.png" alt="undo" width="20"></button>
+        <button onclick="redo()"><img src="Resource/redo.png" alt="redo" width="20"></button>
+    </div>
+
+    <div id="editor" contenteditable="true"></div>
+
+    <script src="script.js"></script>
+
+</body>    
+</html>
